@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operações Matemáticas</title>
+</head>
+<body>
+    <button onclick="realizarOperacoes()">Calcular</button>
+
+    <script>
+        function realizarOperacoes() {
+            var num1 = 10;
+            var num2 = 100;
+
+            var soma = num1 + num2;
+            var subt = num1 - num2;
+            var div = num1 / num2;
+            var multip = num1 * num2;
+
+            var mensagem = "Soma: " + soma + "\n";
+            mensagem += "Subtração: " + subt + "\n";
+            mensagem += "Divisão: " + div + "\n";
+            mensagem += "Multiplicação: " + multip;
+
+            alert(mensagem);
+        }
+    </script>
+</body>
+</html>

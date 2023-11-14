@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Custo</title>
+</head>
+<body>
+
+    <label for="custoFabrica">Custo de Fábrica:</label>
+    <input type="number" id="custoFabrica">
+
+    <label for="percDistribuidor">% Distribuidor:</label>
+    <input type="number" id="percDistribuidor">
+
+    <label for="percImpostos">% Impostos:</label>
+    <input type="number" id="percImpostos">
+
+    <button onclick="calcularCusto()">Calcular</button>
+
+    <label for="valorFinal">Valor Final:</label>
+    <input type="text" id="valorFinal" readonly>
+
+    <script>
+        function calcularCusto() {
+            var custoFabrica = parseFloat(document.getElementById('custoFabrica').value);
+            var percImpostos = parseFloat(document.getElementById('percImpostos').value);
+
+            if (isNaN(custoFabrica) || isNaN(percDistribuidor) || isNaN(percImpostos)) {
+                alert("Por favor, insira valores numéricos válidos.");
+                return;
+            }
+
+            var custoFinal = custoFabrica + (custoFabrica * (percDistribuidor / 100)) + (custoFabrica * (percImpostos / 100));
+
+            document.getElementById('valorFinal').value = custoFinal.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

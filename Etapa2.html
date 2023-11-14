@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop de 10 a 100</title>
+</head>
+<body>
+    <ul id="valores"></ul>
+
+    <script>
+        var valores = document.getElementById('valores');
+
+        for (var i = 10; i <= 100; i++) {
+            var itemLista = document.createElement('li');
+            itemLista.textContent = i;
+            valores.appendChild(itemLista);
+        }
+    </script>
+</body>
+</html>
